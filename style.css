@@ -384,21 +384,21 @@ body {
     width: 100%;
     display: flex;
     justify-content: center;
-    height: 1500px;
+    height: 1400px;
   }
 
   .btm-rsm-bg{
     width: 60%;
     background-color: white;
     border: 2px solid black;
+    box-shadow: 10px 10px 5px rgb(145, 145, 145);
     border-radius: 25px;
     height: 100%;
-    /* overflow: scroll; */
   }
 
   .btm-rsm1{
     width: 100%;
-    height: 55%;
+    height: 60%;
     display: flex;
     justify-content: center;
   }
@@ -412,6 +412,7 @@ body {
   .btm-rsm1 h1{
     text-align: center;
     font-size: 50px;
+    margin-top: 20px;
   }
 
   .cnt-rsm{
@@ -471,8 +472,29 @@ body {
 
   .cnt-rsm-rgt{
     height: 100%;
-    width: 20%;
+    width: 30%;
     padding: 20px;
+  }
+
+  .skill{
+    height: 80%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  .tch-skills{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 40%;
+  }
+
+  .soft-skills{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 40%;
   }
 
   .experience h3{
@@ -505,34 +527,94 @@ body {
   }
 
   .btm-rsm2{
-    height: 50%;
+    height: 40%;
     width: 100%;
   }
 
   .certifications{
     height: 100%;
     width: 100%;
-    /* padding: 20px; */
+  }
+
+  .certifications h3{
+    font-size: 30px;
+    padding: 10px;
   }
 
   .crf-cards{
     display: flex;
     flex-wrap: wrap;
-    border: 1px red solid;
-    /* padding: 20px; */
   }
 
   .crf-card{
     display: flex;
-    justify-content: space-evenly;
     align-items: center;
     margin: 20px;
     height: 100px;
     width: 400px;
-    border: 1px green solid;
+    border: 2px black solid;
+    border-radius: 25px;
   }
 
   .crf-card img{
+    height: 100%;
+    width: 30%;
+    border-right: 2px black solid;
+    padding: 10px;
+    margin-right: 20px;
+  }
+
+  #project{
+    height: 100%;
+    width: 100%;
+  }
+
+  .topbar-prj {
+    border: 2px solid black;
     height: 60px;
-    width: 60px;
+    width: 800px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: white;
+    border-radius: 30px;
+    box-shadow: 10px 10px 5px rgb(145, 145, 145);
+    font-size: 30px;
+  }
+  
+  .topbar-prj a {
+    text-decoration: none;
+    color: black;
+  }
+
+  .topbar-prj a:hover {
+    transform: scale(1.5);
+    transition: 0.3s;
+  }
+  
+  .top-prj {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 15%;
+    width: 100%;
+  }
+
+  .btm-prj{
+    height: 85%;
+    border: 5px green solid;
+  }
+
+  .projects{
+    height: 100%;
+  }
+
+  .project-heading{
+    height: 10%;
+  }
+
+  .project-cards{
+    border: 5px red solid;
+    width: 100%;
+    height: 90%;
   }
