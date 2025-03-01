@@ -2,10 +2,21 @@
 import { Facebook, Github, Instagram, Linkedin, Twitter, Menu } from 'lucide-react'
 import React, { useState, useEffect, useRef } from 'react'
 import gsap from 'gsap'
+import Image from 'next/image'
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
   const menuRef = useRef(null);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 50);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   useEffect(() => {
     const ctx = gsap.context(() => {
@@ -19,7 +30,7 @@ const Navbar = () => {
         gsap.to(menuRef.current, {
           opacity: 0,
           y: -20,
-          duration: 0.3,
+          duration: 0.5,
           ease: 'power3.in',
           onComplete: () => {
             if (menuRef.current) {
@@ -34,8 +45,12 @@ const Navbar = () => {
   }, [isOpen]);
 
   return (
-    <div className='w-full p-3'>
-      <div className='w-full h-full p-4 flex items-center justify-between rounded-full bg-black text-white'>
+      <div className={`w-full h-[10dvh] sticky -top-1 z-999 transition-all duration-400 ease-in-out ${
+        isScrolled ? 'md:p-0' : 'md:p-3'
+      }`}>
+        <div className={`w-full h-full p-4 flex items-center justify-between text-white transition-all duration-300 ease-in-out ${
+          isScrolled ? 'md:rounded-none md:bg-black/90 bg-black md:backdrop-blur-3xl shadow-2xl' : 'md:rounded-full bg-black md:backdrop-blur-none shadow-2xl'
+        }`}>
 
         <div className='hidden md:flex md:w-1/3'>
           <ul className='flex gap-4'>
@@ -46,7 +61,13 @@ const Navbar = () => {
           </ul>
         </div>
 
-        <div className='text-xl font-semibold md:w-1/3 text-center'>Sahil Mor</div>
+        <Image
+          src="/logo.jpg"
+          alt='SM'
+          width={100}
+          height={100}
+          className='h-[200%] object-cover object-center -ml-7'
+        />
 
         <div className='hidden md:flex md:w-1/3 gap-4 justify-end'>
           <a href="https://github.com/sahilmor" target='_blank'><Github /></a>
@@ -63,19 +84,12 @@ const Navbar = () => {
         </div>
       </div>
 
-      <div ref={menuRef} className='md:hidden bg-black/90 text-white mt-2 p-3 rounded-lg hidden'>
-        <ul className='flex flex-col gap-3'>
+      <div ref={menuRef} className='md:hidden bg-black text-white p-3  hidden'>
+        <ul className='flex flex-col gap-3 items-end'>
           <li>Home</li>
           <li>About</li>
           <li>Portfolio</li>
           <li>Contact</li>
-          <div className='flex gap-3 justify-center mt-2'>
-            <a href="https://github.com/sahilmor"><Github /></a>
-            <a href="https://www.linkedin.com/in/sahilmor/"><Linkedin /></a>
-            <a href="https://www.instagram.com/sahilmor05/"><Instagram /></a>
-            <a href="https://x.com/sahilmor05"><Twitter /></a>
-            <a href="https://www.facebook.com/sahilmor05/"><Facebook /></a>
-          </div>
         </ul>
       </div>
     </div>

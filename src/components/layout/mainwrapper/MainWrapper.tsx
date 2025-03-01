@@ -8,9 +8,11 @@ type MainWrapperProps = {
 
 const MainWrapper = ({ children }: MainWrapperProps) => {
   return (
-    <div className="flex flex-col min-h-screen bg-[#1f1f1f]">
+    <div className="flex flex-col min-h-screen bg-[#171717]">
       <Navbar />
-      <main className="flex-1">{children}</main>
+      <main className="flex-1">
+        {children}
+        </main>
       <Footer />
     </div>
   );
