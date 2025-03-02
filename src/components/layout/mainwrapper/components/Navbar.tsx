@@ -66,7 +66,9 @@ const Navbar = () => {
           alt='SM'
           width={100}
           height={100}
-          className='h-[200%] object-cover object-center -ml-7'
+          className={`object-cover object-center -ml-7 ${
+            isScrolled ? 'h-[170%]' : 'h-[200%]'
+          }`}
         />
 
         <div className='hidden md:flex md:w-1/3 gap-4 justify-end'>
