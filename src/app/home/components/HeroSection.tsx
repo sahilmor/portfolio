@@ -5,6 +5,12 @@ import Image from 'next/image'
 import React, { useEffect, useRef} from 'react'
 import gsap from 'gsap'
 import AboutSection from './AboutSection'
+import ShadowHand from 'next/font/local'
+
+const shadowhand = ShadowHand({
+  src: '../../../fonts/ShadowHand.ttf',
+})
+
 
 const HeroSection = () => {
   const heroRef = useRef(null)
@@ -24,7 +30,7 @@ const HeroSection = () => {
     <div ref={heroRef}>
       <div className='w-full md:h-[90dvh] p-4 md:flex items-center justify-between'>
         <div className='md:w-[60%] text-center flex items-center justify-center flex-col gap-3 text-white'>
-          <h1 className='hero-title md:text-8xl text-5xl font-bold'>Sahil Mor</h1>
+          <h1 className={`hero-title md:text-8xl text-5xl font-bold ${shadowhand.className}`}>Sahil Mor</h1>
           <h3 className='hero-subtitle md:text-2xl'>
             <ColourfulText text="Full Stack Developer" />
           </h3>
@@ -42,13 +48,13 @@ const HeroSection = () => {
             </a>
           </div>
         </div>
-        <div className='w-[40%] md:flex items-center justify-center hidden'>
+        <div className='w-[40%] md:flex items-center justify-center hidden -mt-10'>
           <Image
             src='/man.png'
             alt='man'
             width={500}
             height={500}
-            className='hero-image z-999 fixed'
+            className='hero-image'
           />
         </div>
       </div>

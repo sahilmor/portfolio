@@ -3,6 +3,7 @@ import { Facebook, Github, Instagram, Linkedin, Twitter, Menu } from 'lucide-rea
 import React, { useState, useEffect, useRef } from 'react'
 import gsap from 'gsap'
 import Image from 'next/image'
+import Link from 'next/link'
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -49,14 +50,15 @@ const Navbar = () => {
         isScrolled ? 'md:p-0' : 'md:p-3'
       }`}>
         <div className={`w-full h-full p-4 flex items-center justify-between text-white transition-all duration-300 ease-in-out ${
-          isScrolled ? 'md:rounded-none md:bg-black/90 bg-black md:backdrop-blur-3xl shadow-2xl' : 'md:rounded-full bg-black md:backdrop-blur-none shadow-2xl'
+          isScrolled ? 'md:rounded-none bg-black md:backdrop-blur-3xl shadow-2xl' : 'md:rounded-full bg-black md:backdrop-blur-none shadow-2xl'
         }`}>
 
         <div className='hidden md:flex md:w-1/3'>
           <ul className='flex gap-4'>
             <li>Home</li>
             <li>About</li>
-            <li>Portfolio</li>
+            <li>Experience</li>
+            <li><Link href='/project'>Projects</Link></li>
             <li>Contact</li>
           </ul>
         </div>

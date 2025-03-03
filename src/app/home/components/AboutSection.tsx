@@ -1,10 +1,16 @@
 import Image from 'next/image'
 import React from 'react'
+import ShadowHand from 'next/font/local'
+
+const shadowhand = ShadowHand({
+  src: '../../../fonts/ShadowHand.ttf',
+})
 
 const AboutSection = () => {
   return (
     <div className='px-2'>
-        <div className='text-center text-white text-1xl md:w-[60%] mt-4 md:mt-0 md:px-10 px-4'>
+      <h1 className={`md:text-8xl text-6xl mt-4 md:mt-4 text-white font-bold w-full text-center p-3 ${shadowhand.className}`}>Skills</h1>
+        <div className='text-center text-white text-1xl md:px-10 p-4'>
           <p>
             I specialize in building modern, high-performance web applications with a strong focus on user experience and scalability. My expertise spans both frontend and backend development, allowing me to create seamless digital solutions from end to end.
           </p>
@@ -15,7 +21,7 @@ const AboutSection = () => {
             Great software isn&apos;t just about writing code; it&apos;s about crafting experiences that make an impact.
           </h1>
         </div>
-        <div className='md:w-[60%] px-10 flex flex-col justify-center items-center md:mt-5 mt-2'>
+        <div className='px-10 md:px-16 flex flex-col justify-center items-center md:mt-5 mt-2'>
           <div className='flex gap-6 mt-6 items-center justify-center flex-wrap'>
             <Image src='/html.png' alt='html' width={100} height={100} className="w-12 md:w-26" />
             <Image src='/css.png' alt='css' width={100} height={100} className="w-12 md:w-26" />
