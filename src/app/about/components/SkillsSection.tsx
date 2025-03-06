@@ -1,15 +1,9 @@
 import Image from 'next/image'
 import React from 'react'
-import ShadowHand from 'next/font/local'
 
-const shadowhand = ShadowHand({
-  src: '../../../fonts/ShadowHand.ttf',
-})
-
-const AboutSection = () => {
+const Skills = () => {
   return (
     <div className='px-2'>
-      <h1 className={`md:text-8xl text-6xl mt-4 md:mt-4 text-white font-bold w-full text-center p-3 ${shadowhand.className}`}>Skills</h1>
         <div className='text-center text-white text-1xl md:px-10 p-4'>
           <p>
             I specialize in building modern, high-performance web applications with a strong focus on user experience and scalability. My expertise spans both frontend and backend development, allowing me to create seamless digital solutions from end to end.
@@ -44,4 +38,4 @@ const AboutSection = () => {
   )
 }
 
-export default AboutSection
+export default Skills

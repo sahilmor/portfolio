@@ -1,18 +1,11 @@
 import React from 'react'
-import ShadowHand from 'next/font/local'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 import Image from 'next/image'
 
-const shadowhand = ShadowHand({
-  src: '../../../fonts/ShadowHand.ttf',
-})
-
-
 const ExperienceSection = () => {
   return (
-    <div className="p-4 px-8 space-y-4">
-        <h1 className={`md:text-7xl text-5xl text-white font-bold w-full text-center mt-8 ${shadowhand.className}`}>Experience</h1>
-        <div className='md:flex gap-3 p-4 space-y-4 md:space-y-0'>
+    <div className="md:p-4 md:px-8 space-y-4">
+        <div className='md:flex gap-3 p-4 space-y-4 md:space-y-0 md:mt-10'>
             <Card className='md:w-1/3'>
                 <CardHeader className='flex flex-col gap-3 justify-center items-center'>
                     <CardTitle className='text-2xl'>Naai India</CardTitle>
@@ -56,7 +49,7 @@ const ExperienceSection = () => {
                         <div className='md:w-[70%] p-2'>
                             <ul className='list-disc'>
                                 <li>Built and designed the NGO&apos;s website.</li>
-                                <li>Improved site functionality and user experience.</li>
+                                <li>Improved site functionality and user experienceSection.</li>
                                 <li>Supported the team in digital expansion.</li>
                             </ul>
                         </div>

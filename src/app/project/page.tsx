@@ -3,6 +3,8 @@ import Image from 'next/image';
 import { CardBody, CardContainer, CardItem } from '@/components/ui/3d-card';
 import ShadowHand from 'next/font/local';
 import { projects } from './data/data';
+import { ShootingStars } from '@/components/ui/shooting-stars';
+import { StarsBackground } from '@/components/ui/stars-background';
 
 const shadowhand = ShadowHand({
     src: '../../fonts/ShadowHand.ttf',
@@ -10,7 +12,7 @@ const shadowhand = ShadowHand({
 
 const Project = () => {
     return (
-        <div className='w-full space-y-5 p-4'>
+        <div className='w-full space-y-5 p-4 relative'>
             <h1 className={`md:text-8xl text-5xl font-bold text-white w-full text-center ${shadowhand.className}`}>
                 Projects
             </h1>
@@ -46,6 +48,8 @@ const Project = () => {
                     </CardContainer>
                 ))}
             </div>
+            <ShootingStars />
+            <StarsBackground />
         </div>
     );
 };
