@@ -62,7 +62,7 @@ export default function ContactForm() {
                         <h2 className="text-4xl font-bold">Hello😊</h2>
                     </div>
 
-                    <div className="flex items-baseline gap-4">
+                    <div className="flex items-baseline gap-4 flex-col md:flex-row">
                         <label htmlFor="name" className="text-4xl font-bold whitespace-nowrap">
                             My name is
                         </label>
@@ -77,7 +77,7 @@ export default function ContactForm() {
                         />
                     </div>
 
-                    <div className="flex items-baseline gap-4">
+                    <div className="flex items-baseline gap-4 flex-col md:flex-row">
                         <label htmlFor="company" className="text-4xl font-bold whitespace-nowrap">
                             I&apos;m from
                         </label>
@@ -92,7 +92,7 @@ export default function ContactForm() {
                         />
                     </div>
 
-                    <div className="flex items-baseline gap-4">
+                    <div className="flex items-baseline gap-4 flex-col md:flex-row">
                         <label htmlFor="email" className="text-4xl font-bold whitespace-nowrap">
                             Here is my email
                         </label>
@@ -107,7 +107,7 @@ export default function ContactForm() {
                         />
                     </div>
 
-                    <div className="flex items-baseline gap-4">
+                    <div className="flex items-baseline gap-4 flex-col md:flex-row">
                         <label htmlFor="message" className="text-4xl font-bold whitespace-nowrap">
                             And message
                         </label>
